@@ -1,9 +1,33 @@
 Change Log -- Ray Tracing in One Weekend
 ====================================================================================================
 
-# v3.1.1 (in progress)
+# v3.1.2 (2020-06-03)
 
 ### _In One Weekend_
+  - Fix: Correct typo: "Intance Translation" -> "Instance Translation"
+  - Fix: Corrected geometry type when computing distance between two points, final scene (#609)
+
+### _The Rest of Your Life_
+  - Fix: Missing closing parenthesis in listing 10 (#603)
+  - Fix: Tiny improvements to the lambertian::scatter() development (#604)
+  - Fix: Correct geometry type and unit vector method in `ray_color()`, listing 20 (#606)
+  - Fix: Listing 26: alternate `random_double()` switched `distribution`, `generator` (#621)
+  - Fix: Listing 28, 30: `light_shape` should have default material, not `0` (#607)
+  - Fix: Listing 30: `mixture_pdf` needs `shared_ptr` arguments (#608)
+
+
+----------------------------------------------------------------------------------------------------
+# v3.1.1 (2020-05-16)
+
+### Common
+  - Fix: Refactoring the camera code in v3.1.0 missed updating the viewport to match, resulting in
+    distorted renders (#536)
+  - Change: Camera code improvements to make it more robust when any particular value changes. Also,
+    the code develops in a smoother series of iterations as the book progresses. (#536)
+
+### _In One Weekend_
+  - Fix: Camera initialization with explicit up vector (#537)
+  - Fix: Changed some text around the camera model and the camera defocus blur model (#536)
   - Change: The C++ `<random>` version of `random_double()` no longer depends on `<functional>`
     header.
   - Change: Refactored `random_scene()`. More named intermediate values, sync'ed with source.
